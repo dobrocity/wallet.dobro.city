@@ -4,7 +4,7 @@ export type SavedAddresses = {
   [address: string]: { label: string }
 }
 
-const storageKey = "sunce:favorites:mainnet"
+const storageKey = "dobro:favorites:mainnet"
 
 interface Props {
   children: React.ReactNode

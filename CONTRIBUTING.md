@@ -1,4 +1,4 @@
-# Contributing to Sunce Wallet
+# Contributing to Dobro Wallet
 
 Thanks for your willingness to contribute. 🙌
 If you contribute to this project, you agree to release your work under the license of this project.
