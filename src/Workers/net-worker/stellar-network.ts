@@ -82,7 +82,7 @@ const accountDataWaitingCache = new Map<string, ReturnType<typeof waitForAccount
 const fetchQueuesByHorizon = new Map<string, PromiseQueue>()
 
 const identification = {
-  "X-Client-Name": "Sunce",
+  "X-Client-Name": "Dobro",
   "X-Client-Version": pkg.version
 }
 

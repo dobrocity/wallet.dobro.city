@@ -135,11 +135,11 @@ initSettings()
 
 function initKeyStore() {
   // TODO: Change this before release!
-  const keys = localStorage.getItem("sunce:keys")
+  const keys = localStorage.getItem("dobro:keys")
   const initialKeys = keys ? JSON.parse(keys) : defaultTestingKeys
 
   function saveKeys(keysData: KeysData<PublicKeyData>) {
-    localStorage.setItem("sunce:keys", JSON.stringify(keysData))
+    localStorage.setItem("dobro:keys", JSON.stringify(keysData))
   }
   // Create a key store with a high number of iterations to make it harder to brute-force, default is only 10000.
   const keyStore = createStore<PrivateKeyData, PublicKeyData>(saveKeys, initialKeys, { iterations: 250000 })
@@ -174,7 +174,7 @@ function initKeyStore() {
 }
 
 function initSettings() {
-  const storedSettings = localStorage.getItem("sunce:settings")
+  const storedSettings = localStorage.getItem("dobro:settings")
   let settings = storedSettings ? JSON.parse(storedSettings) : defaultSettings
 
   callHandlers[Messages.BioAuthAvailable] = () => ({ available: false, enrolled: false })
@@ -186,7 +186,7 @@ function initSettings() {
       ...updatedSettings
     }
 
-    localStorage.setItem("sunce:settings", JSON.stringify(settings))
+    localStorage.setItem("dobro:settings", JSON.stringify(settings))
   }
 
   callHandlers[Messages.ReadIgnoredSignatureRequestHashes] = () => {

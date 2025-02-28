@@ -21,9 +21,9 @@ export function createMainWindow() {
     height: 600,
     minWidth: 400,
     minHeight: 300,
-    title: "Sunce Wallet",
+    title: "Dobro Wallet",
     icon: nativeImage.createFromPath(path.join(__dirname, "../build/icon.png")),
-    backgroundColor: "#EBBE2C",
+    backgroundColor: "##fefbf6",
     titleBarStyle: process.platform === "darwin" ? "hidden" : "default",
     webPreferences: {
       contextIsolation: true, // isolate context for preload scripts

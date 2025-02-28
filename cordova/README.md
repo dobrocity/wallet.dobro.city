@@ -1,4 +1,4 @@
-# Sunce mobile apps
+# Dobro mobile apps
 
 ## Development
 
@@ -67,7 +67,7 @@ Follow the steps in [Cordova iOS - Installing the Requirements](https://cordova.
 Open the Project folder in Xcode:
 
 ```
-open ./platforms/ios/Sunce.xcworkspace/
+open ./platforms/ios/Dobro.xcworkspace/
 ```
 
 You can now select a device from the dropdown in the upper-left corner and run the application.

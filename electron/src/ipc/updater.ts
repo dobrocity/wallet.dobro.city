@@ -13,7 +13,7 @@ interface UpdateInfo {
   url: string
 }
 
-const updateEndpoint = !isDev ? "https://update.sunce.monteliber.org/" : process.env.VITE_UPDATE_ENDPOINT
+const updateEndpoint = !isDev ? "https://update.wallet.dobro.city/" : process.env.UPDATE_ENDPOINT
 
 // tslint:disable-next-line: no-console
 checkForUpdates().catch(console.error)
@@ -32,7 +32,7 @@ function getUpdaterOptions() {
   const url = new URL(`/update/${process.platform}/${app.getVersion()}`, updateEndpoint).toString()
 
   const headers = {
-    "user-agent": `MonteliberoSunce/${app.getVersion()} ${os.platform()}/${os.release()}`,
+    "user-agent": `Dobro/${app.getVersion()} ${os.platform()}/${os.release()}`,
     "x-user-staging-id": installationID
   }
 
@@ -79,7 +79,7 @@ async function startUpdatingWithoutInfo() {
   const feedURL = new URL(`/update/${process.platform}/${app.getVersion()}`, updateEndpoint).toString()
 
   const headers = {
-    "user-agent": `MonteliberoSunce/${app.getVersion()} ${os.platform()}/${os.release()}`,
+    "user-agent": `Dobro/${app.getVersion()} ${os.platform()}/${os.release()}`,
     "x-user-staging-id": installationID
   }
 
@@ -118,8 +118,8 @@ async function startUpdating(version: string) {
     buttons: ["Restart", "Later"],
     cancelId: 1,
     defaultId: 0,
-    title: "Restart the Sunce app",
-    message: "Sunce needs to quit and re-open to apply the update."
+    title: "Restart the Dobro app",
+    message: "Dobro needs to quit and re-open to apply the update."
   })
 
   if (response === 0) {
@@ -129,7 +129,7 @@ async function startUpdating(version: string) {
 
 function showUpdateNotification(version: string) {
   const notification = new Notification({
-    title: `New version ${version} of Sunce available`,
+    title: `New version ${version} of Dobro available`,
     body: "",
     subtitle: `Click to update.`
   })
@@ -146,7 +146,7 @@ function showUpdateNotification(version: string) {
 
 function showDownloadingNotification(version: string) {
   const notification = new Notification({
-    title: `Updating Sunce`,
+    title: `Updating Dobro`,
     subtitle: `Download of ${version} in progress.`,
     body: "",
     silent: true

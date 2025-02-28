@@ -68,7 +68,7 @@ function LumenDepositOptions(props: LumenDepositOptionsProps) {
         message={
           <Trans i18nKey="account.purchase-lumens.moonpay.legal-confirmation">
             You will be redirected to moonpay.io, a third-party service. The depositing process is operated by Moon Pay
-            Ltd, not by Sunce or Montelibero.
+            Ltd, not by Dobro City Team.
             <br />
             <br />
             Please contact the moonpay.io support for inquiries related to your deposit.

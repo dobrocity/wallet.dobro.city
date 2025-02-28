@@ -60,7 +60,7 @@ jobs:
           security list-keychain -d user -s $KEYCHAIN_PATH
 
           mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
-          echo -n "${{ secrets.MAIN_APP_APPSTORE_PROVISION_PROFILE_BASE64 }}" | base64 --decode > ~/Library/MobileDevice/Provisioning\ Profiles/Sunce\ provision.mobileprovision
+          echo -n "${{ secrets.BUILD_PROVISION_PROFILE_BASE64 }}" | base64 --decode > ~/Library/MobileDevice/Provisioning\ Profiles/d3d49bea-920d-491e-88f7-36e405fd1ebb.mobileprovision
 
       - name: Build IPA
         run: |
@@ -69,7 +69,7 @@ jobs:
 
       - name: Upload to Testflight
         run: |
-          IPA_PATH="${{ github.workspace }}/cordova/platforms/ios/build/Release-iphoneos/Sunce Wallet.ipa"
+          IPA_PATH="${{ github.workspace }}/cordova/platforms/ios/build/Release-iphoneos/Dobro Wallet.ipa"
           xcrun altool --validate-app -f "$IPA_PATH" -t ios --username ${{ secrets.APPLE_USER }} --password ${{ secrets.APPLE_APP_SPECIFIC_PASSWORD }}
           xcrun altool --upload-app -f "$IPA_PATH" -t ios --username ${{ secrets.APPLE_USER }} --password ${{ secrets.APPLE_APP_SPECIFIC_PASSWORD }}
 
