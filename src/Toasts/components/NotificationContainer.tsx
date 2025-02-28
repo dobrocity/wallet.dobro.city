@@ -45,12 +45,12 @@ const NotificationDetails = React.memo(function NotificationDetails(props: Notif
               Contact us via
             </Trans>{" "}
             <a
-              href="mailto:sunce@montelibero.org"
+              href="mailto:contact@dobro.city"
               style={{ color: "inherit" }}
               target="_blank"
               rel="noopener noreferrer"
             >
-              sunce@montelibero.org
+              contact@dobro.city
             </a>
           </Typography>
         </Box>
