@@ -141,12 +141,6 @@ function AccountTransactions(props: { account: Account }) {
                 style={{ marginBottom: isSmallScreen ? 16 : 32 }}
               />
             ) : null}
-            <MainSelectionButton
-              Icon={CreditCardIcon}
-              description={t("account.transactions.action.navigate-to-deposit.description")}
-              label={t("account.transactions.action.navigate-to-deposit.label")}
-              onClick={navigateToDeposit}
-            />
           </VerticalLayout>
         </>
       )}
