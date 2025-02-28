@@ -3,7 +3,11 @@
     "release": {
       "deploymentTarget": "12.0",
       "codeSignIdentity": "Apple Distribution",
+<<<<<<< HEAD
       "provisioningProfile": "d3d49bea-920d-491e-88f7-36e405fd1ebb",
+=======
+      "provisioningProfile": "Dobro provision",
+>>>>>>> 50758a49 (Sunce renamed to Dobro)
       "developmentTeam": "5V5EUT3ZXJ",
       "automaticProvisioning": false,
       "packageType": "app-store"

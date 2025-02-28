@@ -1,5 +1,5 @@
 # Don't change the appId! See <https://www.electron.build/configuration/nsis#guid-vs-application-name>
-appId: org.montelibero.solar
+appId: city.dobro.wallet
 productName: Dobro Wallet
 copyright: Copyright © 2025 Dobro City Team
 artifactName: Dobro-Wallet-${version}-${os}-${arch}.${ext}
