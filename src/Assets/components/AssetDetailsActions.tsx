@@ -3,7 +3,6 @@ import { useTranslation } from "react-i18next"
 import { Asset, Operation, Horizon, Transaction } from "@stellar/stellar-sdk"
 import Dialog from "@material-ui/core/Dialog"
 import ClearIcon from "@material-ui/icons/Clear"
-import SwapHorizIcon from "@material-ui/icons/SwapHoriz"
 import { Account } from "~App/contexts/accounts"
 import { trackError } from "~App/contexts/notifications"
 import * as routes from "~App/routes"
@@ -83,9 +82,6 @@ function AssetDetailsActions(props: Props) {
           <>
             <ActionButton icon={<ClearIcon />} onClick={removeThisAsset} type="secondary">
               {t("account.add-asset.action.remove")}
-            </ActionButton>
-            <ActionButton icon={<SwapHorizIcon />} onClick={tradeThisAsset} type="primary">
-              {t("account.add-asset.action.trade")}
             </ActionButton>
           </>
         ) : (
