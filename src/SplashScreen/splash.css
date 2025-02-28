@@ -29,7 +29,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(to left bottom, #ebbe2c, #d6a400);
+  background: linear-gradient(to left bottom, #52755D, #52755D);
   color: black;
   transition: opacity 0.3s;
 }

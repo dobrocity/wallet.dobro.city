@@ -36,7 +36,7 @@
         <hook type="before_build" src="scripts/android/useFullScreenActivity.sh" />
 
         <preference name="AndroidWindowSplashScreenAnimatedIcon" value="res/icon/android/adaptiveicon/mipmap-xxxhdpi/ic_launcher_foreground.png" />
-        <preference name="AndroidWindowSplashScreenBackground" value="#ebbe2c" />
+        <preference name="AndroidWindowSplashScreenBackground" value="#52755D" />
 
         <icon background="res/icon/android/adaptiveicon/mipmap-mdpi/ic_launcher_background.png" density="mdpi" foreground="res/icon/android/adaptiveicon/mipmap-mdpi/ic_launcher_foreground.png" />
         <icon background="res/icon/android/adaptiveicon/mipmap-hdpi/ic_launcher_background.png" density="hdpi" foreground="res/icon/android/adaptiveicon/mipmap-hdpi/ic_launcher_foreground.png" />
@@ -108,5 +108,5 @@
     <preference name="SwiftVersion" value="5.0" />
     <preference name="scheme" value="app" />
     <preference name="hostname" value="localhost" />
-    <preference name="BackgroundColor" value="0xffd6a400" />
+    <preference name="BackgroundColor" value="0x52755D" />
 </widget>
