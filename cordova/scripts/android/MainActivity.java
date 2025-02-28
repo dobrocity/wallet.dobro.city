@@ -17,7 +17,7 @@
        under the License.
  */
 
-package org.montelibero.solar;
+package city.dobro.wallet;
 
 import android.graphics.Color;
 import android.os.Build;
