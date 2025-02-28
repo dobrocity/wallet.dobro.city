@@ -38,7 +38,7 @@ export function registerNotificationHandler() {
       cordova.plugins.notification.local.on("click", handler)
 
       const smallIcon = device && device.platform === "Android" ? "res://notif_icon.png" : undefined
-      const color = "#ebbe2c"
+      const color = "#52755D"
 
       cordova.plugins.notification.local.schedule({ color, id, smallIcon, ...notification })
     })
