@@ -87,7 +87,7 @@
     }
   },
   "trusted-services": {
-    "info": "Trusted Services o servicios de confianza, son servicios en la web a los que se permite interactuar con Sunce solicitando datos de cuenta o proponiendo transacciones. Puedes agregar un nuevo servicio una vez que el mismo trata de interactuar con Sunce.",
+    "info": "Trusted Services o servicios de confianza, son servicios en la web a los que se permite interactuar con Dobro solicitando datos de cuenta o proponiendo transacciones. Puedes agregar un nuevo servicio una vez que el mismo trata de interactuar con Dobro.",
     "service-selection": {
       "action": {
         "cancel": "Cancelar",
