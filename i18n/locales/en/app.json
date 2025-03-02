@@ -58,9 +58,9 @@
         "message": "Enable app notifications"
       },
       "protocol-handler": {
-        "error": "Could not register Sunce as default handler.",
-        "message": "Do you want Sunce to handle interactive Stellar links on this computer (recommended)?",
-        "success": "Successfully registered Sunce as default handler.",
+        "error": "Could not register Dobro as default handler.",
+        "message": "Do you want Dobro to handle interactive Stellar links on this computer (recommended)?",
+        "success": "Successfully registered Dobro as default handler.",
         "tooltip": {
           "dismiss": "Dismiss",
           "install": "Install"
