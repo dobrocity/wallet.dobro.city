@@ -52,7 +52,7 @@
   },
   "dependencies": {
     "@stellar/stellar-sdk": "^13.1.0",
-    "@stellarguard/stellar-uri": "^3.0.1",
+    "@suncewallet/stellar-uri": "^1.0.0",
     "@suncewallet/stellar-transfer": "^1.0.0",
     "@suncewallet/stellar-sep-10": "^1.0.0",
     "electron-context-menu": "^3.6.1",
