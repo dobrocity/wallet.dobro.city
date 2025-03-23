@@ -1,5 +1,3 @@
-/// <reference types="parcel-env" />
-
 import React from "react"
 import { HashRouter as Router } from "react-router-dom"
 import { MuiThemeProvider } from "@material-ui/core/styles"
@@ -8,7 +6,7 @@ import { ContextProviders } from "./context"
 import theme from "../theme"
 import ReactDOM from "react-dom"
 
-const Stage2 = React.lazy(() => import("./app-stage2"))
+ const Stage2 = React.lazy(() => import("./app-stage2"))
 
 export const Providers = (props: { children: React.ReactNode }) => (
   <Router>
@@ -27,8 +25,3 @@ const App = () => (
 )
 
 ReactDOM.render(<App />, document.getElementById("app"))
-
-// Hot Module Replacement
-if (module.hot) {
-  module.hot.accept()
-}

@@ -13,7 +13,7 @@ jobs:
         - name: setup node
           uses: actions/setup-node@v4
           with:
-            node-version: 20
+            node-version: 22
 
         - name: setup java
           uses: actions/setup-java@v4
@@ -40,7 +40,9 @@ jobs:
             cd cordova
             npm install
             npm run install:android
-            npm run prebuild:android
+
+        - name: Prebuild project (Android)
+          run: npm run prebuild:android
 
         - name: Build artifacts
           env:

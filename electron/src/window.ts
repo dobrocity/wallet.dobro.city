@@ -39,17 +39,15 @@ export function createMainWindow() {
 
   window.removeMenu()
 
-  const pathname = isDev
-    ? path.join(__dirname, "../../dist/index.dev.html")
-    : path.join(__dirname, "../../dist/index.prod.html")
-
+  const pathname = path.join(__dirname, "../../dist/index.html")
+  
   const webappURL = URL.format({
     pathname,
     protocol: "file:",
     slashes: true
   })
 
-  window.loadURL(webappURL)
+  window.loadURL(isDev ? "http://localhost:3000/" : webappURL)
 
   window.webContents.session.setPermissionRequestHandler((webContents, permission, callback) => {
     if (!webContents.getURL().startsWith("file://") && (permission === "media" || permission === "openExternal")) {

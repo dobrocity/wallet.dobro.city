@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, viewport-fit=cover, width=device-width">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com; connect-src *; script-src 'self' 'unsafe-inline' 'unsafe-eval' blob:; style-src 'self' 'unsafe-inline'; worker-src 'self' blob:;">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sunce Wallet</title>
+    <link href="/src/App/css/fonts.css" rel="stylesheet">
+    <link href="/src/App/css/base-styles.css" rel="stylesheet">
+    <link href="/src/SplashScreen/splash.css" rel="stylesheet">
+
+    <style type="text/css">
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        overflow: hidden
+      }
+
+      #walletframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        border: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <iframe id="walletframe">
+    </iframe>
+
+    <script>
+      function onDeviceReady() {
+        const walletframe = document.getElementById("walletframe")
+
+        // Need to delay iframe initialization, so we have time to set up our event listeners first
+        walletframe.setAttribute("src", "/index.html");
+      }
+
+      document.addEventListener("deviceready", onDeviceReady, false);
+    </script>
+
+    <script src="cordova.js"></script>
+    <script type="module" src="/src/App/bootstrap.cordova.ts"></script>
+  </body>
+</html>

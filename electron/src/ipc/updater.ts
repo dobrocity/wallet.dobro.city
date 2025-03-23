@@ -13,7 +13,7 @@ interface UpdateInfo {
   url: string
 }
 
-const updateEndpoint = !isDev ? "https://update.sunce.monteliber.org/" : process.env.UPDATE_ENDPOINT
+const updateEndpoint = !isDev ? "https://update.sunce.monteliber.org/" : process.env.VITE_UPDATE_ENDPOINT
 
 // tslint:disable-next-line: no-console
 checkForUpdates().catch(console.error)

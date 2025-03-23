@@ -1,4 +1,6 @@
 import React from "react"
+import * as webImpl from "./components/web"
+import * as cordovaImpl from "./components/cordova"
 
 interface QRReaderProps {
   onError: (error: Error) => void
@@ -6,16 +8,14 @@ interface QRReaderProps {
   style?: any // ignored
 }
 
+
 function getImplementation() {
   if (window.electron) {
-    const implementation = require("./components/electron")
-    return implementation
-  } else if (process.env.PLATFORM === "android" || process.env.PLATFORM === "ios") {
-    const implementation = require("./components/cordova")
-    return implementation
-  } else if (process.browser) {
-    const implementation = require("./components/web")
-    return implementation
+    return webImpl 
+  } else if (import.meta.env.VITE_PLATFORM === "android" || import.meta.env.VITE_PLATFORM === "ios") {
+    return cordovaImpl
+  } else if (typeof window !== 'undefined') {
+    return webImpl
   } else {
     throw new Error("There are no platform components for your platform.")
   }
