@@ -6,19 +6,19 @@ on:
     types:
       - closed
     branches:
-      - 'release/*'
+      - "release/*"
   push:
     branches:
-      - 'release/*'
+      - "release/*"
 
 jobs:
   build:
-    runs-on: macos-13
+    runs-on: macos-latest
 
     steps:
       - uses: maxim-lobanov/setup-xcode@v1
         with:
-          xcode-version: '15'
+          xcode-version: "16"
 
       - uses: actions/checkout@v4
 
@@ -26,21 +26,25 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22
-  
-      - name: Install project
+
+      - name: Install NPM
         run: |
           npm install
-          npm run prebuild:electron
-  
-      - name: Install project platform (iOS)
+
+      - name: Install Cordova NPM
         run: |
           cd cordova
           npm install
-          npm run install:ios
 
       - name: Prebuild project (iOS)
-        run: npm run prebuild:ios
-  
+        run: |
+          npm run prebuild:ios
+
+      - name: Install project platform (iOS)
+        run: |
+          cd cordova
+          npm run install:ios
+
       - name: Install the Apple certificate and provisioning profiles
         env:
           BUILD_CERTIFICATE_BASE64: ${{ secrets.BUILD_CERTIFICATE_BASE64 }}
@@ -64,7 +68,6 @@ jobs:
 
       - name: Build IPA
         run: |
-          cd cordova
           npm run build:ios
 
       - name: Upload to Testflight
