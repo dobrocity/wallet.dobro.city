@@ -40,6 +40,11 @@
         walletframe.setAttribute("src", "/index.html");
       }
 
+      setTimeout(function() {
+        // Android iframe height fix
+        walletframe.style.height = window.innerHeight
+      }, 100);
+
       document.addEventListener("deviceready", onDeviceReady, false);
     </script>
 

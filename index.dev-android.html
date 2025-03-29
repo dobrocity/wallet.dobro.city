@@ -34,6 +34,11 @@
         walletframe.setAttribute("src", "http://%VITE_LOCAL_IP%:3000/index.html");
       }
 
+      setTimeout(function() {
+        // Android iframe height fix
+        walletframe.style.height = window.innerHeight
+      }, 100);
+
       document.addEventListener("deviceready", onDeviceReady, false);
     </script>
     <script type="module" src="/src/App/bootstrap.cordova.ts"></script>
